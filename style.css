@@ -1,7 +1,26 @@
-#menu
-{
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+#menu {
+    position: fixed;
+    top: 0; /* Ensures the menu is always at the top of the page */
+    width: 100%;
+    background: red; /* Changes the background to red */
+    color: white; /* Changes the text color to white */
+    text-align: center; /* Centers the links */
+    padding: 10px 0; /* Adds padding to the top and bottom for better spacing */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Optional: adds a shadow for better visibility */
+    z-index: 1000; /* Ensures the menu stays on top of other content */
+}
+
+#menu li {
+    display: inline; /* Displays the list items inline */
+    margin-right: 20px; /* Adds spacing between the menu items */
+}
+
+#menu a {
+    color: white; /* Ensures the links are white */
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold; /* Makes the font bold */
+}
+
+#menu a:hover {
+    text-decoration: underline; /* Adds an underline on hover for better interaction */
 }
