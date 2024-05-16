@@ -1,3 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 60px; /* Adjust this value based on the actual height of your navbar */
+}
+
 #menu {
     position: fixed;
     top: 0; /* Ensures the menu is always at the top of the page */
@@ -10,17 +18,78 @@
     z-index: 1000; /* Ensures the menu stays on top of other content */
 }
 
+
 #menu li {
-    display: inline; /* Displays the list items inline */
-    margin-right: 20px; /* Adds spacing between the menu items */
+    display: inline;
+    margin-right: 20px;
 }
 
 #menu a {
-    color: white; /* Ensures the links are white */
-    text-decoration: none; /* Removes underline from links */
-    font-weight: bold; /* Makes the font bold */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #menu a:hover {
-    text-decoration: underline; /* Adds an underline on hover for better interaction */
+    text-decoration: underline;
+}
+
+.section {
+    padding: 20px;
+}
+
+.about-content {
+    overflow: hidden;
+}
+
+.about-content img {
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    height: auto;
+}
+
+.about-content p {
+    margin-left: 220px;
+}
+
+.friends-tell {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.friend img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+.friend {
+    text-align: center;
+    width: 33%;
+}
+
+.friend p {
+    margin-left: 0;
+}
+
+#scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+#scroll-top a {
+    display: inline-block;
+    background: #000; /* Circle color */
+    color: #fff; /* Arrow color */
+    border-radius: 50%; /* Circle shape */
+    padding: 10px;
+    text-decoration: none;
+}
+
+#scroll-top svg {
+    fill: currentColor;
 }
