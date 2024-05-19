@@ -62,26 +62,97 @@
     background: #ddd;
 }
 
+/* Audio controls */
+.audio-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+audio {
+    width: 300px;
+}
+
+.control-button {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.control-button:hover {
+    color: #007bff;
+}
+
+/* Like and Dislike controls */
+.like-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#gif-container img {
+    width: 100px;
+    height: auto;
+}
+
+/* Contact form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact-form label {
+    font-weight: bold;
+}
+
+#contact-form input, 
+#contact-form textarea, 
+#contact-form select, 
+#contact-form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact-form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     padding-top: 60px; /* Adjust this value based on the actual height of your navbar */
+    margin: 0;
 }
 
 #menu {
     position: fixed;
-    top: 0; /* Ensures the menu is always at the top of the page */
+    top: 0;
     width: 100%;
-    background: red; /* Changes the background to red */
-    color: white; /* Changes the text color to white */
-    text-align: center; /* Centers the links */
-    padding: 10px 0; /* Adds padding to the top and bottom for better spacing */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Optional: adds a shadow for better visibility */
-    z-index: 1000; /* Ensures the menu stays on top of other content */
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: top 0.3s;
 }
-
 
 #menu li {
     display: inline;
