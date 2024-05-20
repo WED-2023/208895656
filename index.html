@@ -28,16 +28,32 @@
         <h3>Friends Tell</h3>
         <div class="friends-tell">
             <div class="friend">
-                <img src="put the picture link here" alt="Friend 1" style="width: 100px; height: 100px; border-radius: 50%;">
-                <p>Description of Friend 1.</p>
+                <img src="pictures/chendler.jpg" alt="Friend 1" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>can he be a better person?.</p>
             </div>
             <div class="friend">
-                <img src="put the picture link here" alt="Friend 2" style="width: 100px; height: 100px; border-radius: 50%;">
-                <p>Description of Friend 2.</p>
+                <img src="pictures/emma.jpg" alt="Friend 2" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>sorry i'm still in my nap</p>
             </div>
             <div class="friend">
-                <img src="put the picture link here" alt="Friend 3" style="width: 100px; height: 100px; border-radius: 50%;">
-                <p>Description of Friend 3.</p>
+                <img src="pictures/janice.jpg" alt="Friend 3" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>oh. my. god. he is the best!!</p>
+            </div>
+            <div class="friend">
+                <img src="pictures/joey.jpg" alt="Friend 4" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>jack has a porcha and i'm a porcha man myself</p>
+            </div>
+            <div class="friend">
+                <img src="pictures/monika.jpg" alt="Friend 5" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>i'm like the daughter he never had</p>
+            </div>
+            <div class="friend">
+                <img src="pictures/phoebe.jpg" alt="Friend 6" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>somtimes i see my grandma in him</p>
+            </div>
+            <div class="friend">
+                <img src="pictures/ross.jpg" alt="Friend 7" style="width: 100px; height: 100px; border-radius: 50%;">
+                <p>i was never his favorite chiled, i just got all the good things and monika didnt</p>
             </div>
         </div>
     </section>
@@ -68,9 +84,8 @@
             <button onclick="showLikeGif()" class="control-button"><i class="fas fa-thumbs-up"></i></button>
             <button onclick="showDislikeGif()" class="control-button"><i class="fas fa-thumbs-down"></i></button>
         </div>
-        <div id="gif-container" style="display: none;">
-            <img id="like-gif" src="put_like_gif_url_here" alt="Like GIF" style="display: none;">
-            <img id="dislike-gif" src="put_dislike_gif_url_here" alt="Dislike GIF" style="display: none;">
+        <div id="gif-container">
+            <img id="random-gif" src="" alt="Random GIF">
         </div>
     </section>
 
@@ -194,29 +209,40 @@
             });
         });
 
+        const likeGifs = [
+            "https://gifdb.com/images/high/friends-richard-and-chandler-crxzvb6qle0ywfqo.gif",
+            "https://gifdb.com/images/high/friends-rachel-green-happily-jumping-6p985mnj2jj6obol.gif",
+            "https://gifdb.com/images/high/friends-rachel-green-and-phoebe-buffay-msyzm2pwbhi0txa3.gif"
+        ];
+
+        const dislikeGifs = [
+            "https://gifdb.com/images/high/ross-geller-telling-friends-g7tfzmgdk682hdgy.gif",
+            "https://gifdb.com/images/high/friends-rachel-green-with-monica-geller-l6xqhpiyzi3nb3mp.gif",
+            "https://gifdb.com/images/high/uneasy-friends-ross-geller-oxqn3xhixmfg1rgb.gif",
+            "https://gifdb.com/images/high/friends-ross-geller-calm-sign-fuuhtnoz3xjv9jid.gif",
+            "https://gifdb.com/images/high/friends-joey-tribbiani-peace-sign-woxw1p1z8233y6ye.gif"
+        ];
+
         function showLikeGif() {
-            showGif('like-gif');
+            showRandomGif(likeGifs);
         }
 
         function showDislikeGif() {
-            showGif('dislike-gif');
+            showRandomGif(dislikeGifs);
         }
 
-        function showGif(gifId) {
+        function showRandomGif(gifArray) {
             const gifContainer = document.getElementById('gif-container');
-            const likeGif = document.getElementById('like-gif');
-            const dislikeGif = document.getElementById('dislike-gif');
-            
-            likeGif.style.display = 'none';
-            dislikeGif.style.display = 'none';
+            const randomGif = gifArray[Math.floor(Math.random() * gifArray.length)];
+            const randomGifElement = document.getElementById('random-gif');
 
-            const gif = document.getElementById(gifId);
-            gif.style.display = 'block';
+            randomGifElement.src = randomGif;
+            randomGifElement.style.display = 'block';
             gifContainer.style.display = 'block';
 
             setTimeout(() => {
                 gifContainer.style.display = 'none';
-                gif.style.display = 'none';
+                randomGifElement.style.display = 'none';
             }, 2000);
         }
 

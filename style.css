@@ -96,8 +96,20 @@ audio {
     margin-top: 20px;
 }
 
+#gif-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    background-color: rgba(0, 0, 0, 0.8); /* Optional: adds a semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
 #gif-container img {
-    width: 100px;
+    width: 400px; /* Adjust the size as needed */
     height: auto;
 }
 
@@ -190,23 +202,20 @@ body {
 
 .friends-tell {
     display: flex;
-    justify-content: space-around;
+    overflow-x: auto;
     padding: 20px 0;
+    gap: 20px;
+}
+
+.friend {
+    text-align: center;
+    flex: 0 0 auto;
 }
 
 .friend img {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
-}
-
-.friend {
-    text-align: center;
-    width: 33%;
-}
-
-.friend p {
-    margin-left: 0;
 }
 
 #scroll-top {
