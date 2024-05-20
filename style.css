@@ -1,14 +1,73 @@
+/* General styling */
+body {
+    padding-top: 60px; /* Adjust this value based on the actual height of your navbar */
+    margin: 0;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: red;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+#menu li {
+    display: inline;
+    margin-right: 20px;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#menu a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    padding: 20px;
+    margin-bottom: 40px; /* Increase the gap between sections */
+}
+
+.section h1, .section h3 {
+    text-align: center; /* Center-align all titles */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* Slideshow container */
 .slideshow-container {
     position: relative;
     max-width: 1000px;
     margin: auto;
+    text-align: center;
+}
+
+.slides {
+    max-width: 100%;
+    height: auto;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: block;
 }
 
 /* Hide the images by default */
-.mySlides {
+.slide {
     display: none;
-    width: 100%;
 }
 
 /* Fading animation */
@@ -27,39 +86,38 @@
     animation-iteration-count: infinite;
 }
 
-.mySlides:nth-child(1) {
-    animation-delay: 0s;
+/* About content styling */
+.about-content {
+    overflow: hidden;
 }
 
-.mySlides:nth-child(2) {
-    animation-delay: 4s;
+.about-content img {
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    height: auto;
 }
 
-.mySlides:nth-child(3) {
-    animation-delay: 8s;
+.about-content p {
+    margin-left: 220px;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+.friends-tell {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 0;
+    gap: 20px;
 }
 
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Position the dots below the images */
-.dot-container {
+.friend {
     text-align: center;
-    padding: 20px;
-    background: #ddd;
+    flex: 0 0 auto;
+}
+
+.friend img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
 }
 
 /* Audio controls */
@@ -144,80 +202,7 @@ audio {
     background-color: #0056b3;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    padding-top: 60px; /* Adjust this value based on the actual height of your navbar */
-    margin: 0;
-}
-
-#menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: red;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: top 0.3s;
-}
-
-#menu li {
-    display: inline;
-    margin-right: 20px;
-}
-
-#menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#menu a:hover {
-    text-decoration: underline;
-}
-
-.section {
-    padding: 20px;
-}
-
-.about-content {
-    overflow: hidden;
-}
-
-.about-content img {
-    float: left;
-    margin-right: 20px;
-    width: 200px;
-    height: auto;
-}
-
-.about-content p {
-    margin-left: 220px;
-}
-
-.friends-tell {
-    display: flex;
-    overflow-x: auto;
-    padding: 20px 0;
-    gap: 20px;
-}
-
-.friend {
-    text-align: center;
-    flex: 0 0 auto;
-}
-
-.friend img {
-    display: block;
-    margin: 0 auto;
-    border-radius: 50%;
-}
-
+/* Scroll to Top Button */
 #scroll-top {
     position: fixed;
     bottom: 20px;
@@ -236,4 +221,10 @@ body {
 
 #scroll-top svg {
     fill: currentColor;
+}
+
+.control-button img.icon {
+    width: 24px; /* Adjust the size as needed */
+    height: auto;
+    vertical-align: middle;
 }

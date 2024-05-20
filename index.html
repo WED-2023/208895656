@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Webpage</title>
+    <title>jack geller</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -59,30 +59,46 @@
     </section>
 
     <section id="photos" class="section">
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img src="https://via.placeholder.com/600x400?text=Photo+1" style="width:100%">
+        <div class="container slideshow-container">
+            <h1>Photos</h1>
+            <div class="slides">
+                <div class="slide">
+                    <img src="pictures/jack1.jpg" alt="Image 1">
+                </div>
+                <div class="slide">
+                    <img src="pictures/jack2.jpg" alt="Image 2">
+                </div>
+                <div class="slide">
+                    <img src="pictures/jack3s.jpg" alt="Image 3">
+                </div>
             </div>
-            <div class="mySlides fade">
-                <img src="https://via.placeholder.com/600x400?text=Photo+2" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <img src="https://via.placeholder.com/600x400?text=Photo+3" style="width:100%">
-            </div>
-        </div>
-        <br>
-        <div style="text-align:center">
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-            <span class="dot"></span> 
         </div>
     </section>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => slide.style.display = 'none');
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex - 1].style.display = 'block';
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+
+        showSlides(); // Initialize the slideshow
+    </script>
 
     <section id="like" class="section">
         <h3>Like or Dislike</h3>
         <div class="like-controls">
-            <button onclick="showLikeGif()" class="control-button"><i class="fas fa-thumbs-up"></i></button>
-            <button onclick="showDislikeGif()" class="control-button"><i class="fas fa-thumbs-down"></i></button>
+            <button onclick="showLikeGif()" class="control-button">
+                <img src="icons/like.png" alt="Like" class="icon">
+            </button>
+            <button onclick="showDislikeGif()" class="control-button">
+                <img src="icons/dislike.png" alt="Dislike" class="icon">
+            </button>
         </div>
         <div id="gif-container">
             <img id="random-gif" src="" alt="Random GIF">
@@ -94,71 +110,97 @@
             <h1>Playlist</h1>
             <ul class="playlist">
                 <li>
-                    <p>Carl Goes Up - Artist 2</p>
+                    <p>friends theme song</p>
                     <audio id="song2" controls>
-                        <source src="audio/Up (Soundtrack) - 04 Carl Goes Up.mp3" type="audio/mpeg">
+                        <source src="music/i-ll-be-there-for-you-friends-theme-song-s2TyVQGoCYo.mp3" type="audio/mpeg">
                     </audio>
                 </li>
                 <li>
-                    <p>UP - trailer</p>
-                    <video id="video1" controls>
-                        <source src="audio/Disney_Pixar's Up - Official Trailer.mp4" type="video/mp4">
-                    </video>
+                    <p>Jack Geller - Funny Moments</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/r6JkPYwwNw0" title="Jack Geller - Funny Moments" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </li>
-                <iframe width="1236" height="695" src="https://www.youtube.com/embed/pynau4O26Uw" title="Disney UP - Carl & Ellie - EMOTIONAL LOVE STORY ADVENTURE BOOK ULTRA HD VERY SAD PARADISE FALLS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </ul>
         </div>
     </section>
 
     <section id="qrcoder" class="section">
         <h3>Scan My Code</h3>
-        <img src="website_qr_code.png" alt="QR Code">
+        <img src="icons/qrcode_111538355_471b1c0d7d91c79dc5fa46d30febff1d (1).png" alt="QR Code">
     </section>
 
     <section id="spa" class="section">
-        <img src="pictures/qa_pic.png" alt="QA Image">
+        <img src="icons/qa.png" alt="QA Image">
         <br/>
         <br/>
         <b>3 main differences between web1, web2, web3:</b>
         <br/>
         <br/>
         <br/>
-        <b>הבדל ראשון - חווית משתמש למול האינטרנט</b>
+        <b>הבדל ראשון - חווית משתמש </b>
         <br/>
-        web1 - אתרים סטטיים המאפשרים רק לצפות בתוכן ללא ביצוע פעילויות מעבר לצפייה
+        web1 - אתרים סטטיים המאפשרים צפייה בלבד ללא ביצוע פעילויות
         <br/>
-        web 2 - נכנסה האפשרות לאינטרקטיביות למול המשתמש כמו פורומים ורשתות חברתיות המאפשרות לייצר תוכן
+        web 2 - נכנסה האפשרות לאינטרקטיביות למול המשתמש כמו פורומים וכו
         <br/>
-        web 3 - מאפשר התאמה של התוכן למשתמשים ושימוש בכלים מתקדמים וטכנולוגיות כדי לשלוט על מידע ונתונים
+        web 3 - מאפשר התאמה של התוכן למשתמשים ושימוש בכלים וטכנולוגיות מתקדמות כדי לשלוט על מידע ונתונים
         <br/>
         <br/>
         <br/>
-        <b>הבדל שני - מי ייצר את האתרים?</b>
+        <b>הבדל שני - מי כותב את האתרים?</b>
         <br/>
-        web1 - בעיקר רשתות גדולות או ארגונים רשמיים על מנת לספק מידע
+        web1 - בעיקר רשתות גדולות או ארגונים רשמיים
         <br/>
-        web 2 - נוספה האפשרות לפרט לייצר אתרים, בלוגים ורשתות חברתיות לשיתוף מידע פרטי
+        web 2 - אדם פרטי יכול לייצר אתרים לשיתוף מידע פרטי
         <br/>
-        web 3 - ברמת השימוש די זהה ל2 אך השוני שמתנסה להתבצע הוא שלפרט תהיה יותר שליטה וכוח על המידע הפרטי
+        web 3 - לפרט תהיה יותר שליטה וכוח על המידע הפרטי אך מבחינת מימוש זה מאוד דומה לweb2
         <br/>
         <br/>
         <br/>
         <b>הבדל שלישי - חיפוש מידע</b>
         <br/>
-        web1 - אין מנועי חיפוש המאפשרים לבצע חיפוש מידע ועיבוד שפה
+        web1 - אין מנועי חיפוש 
         <br/>
-        web 2 - מאפשר להעלות שאילתות לאתרים ופורומים, אך לא היו את הכלים ולקבל תוכן הקשור לשאלה אך לא בהכרח את התשובה
+        web 2 - יש כבר מנועי חיפוש בסיסיים אך הם בלי התייחסות לקונטקסט
         <br/>
-        web 3 - מאפשר חיפוש ע"פ כלים מתקדמים כמו בינה מלאכותית על מנת לאחזר את התשובות הרלוונטיות ביותר לשאילתות
+        web 3 - שימוש בבינה מלאכותית ואלגוריתמים מתקדמים לאחזור המידע עם התייחסות לקונטקסט
         <br/>
         <br/>
         <b>use case differences:</b>
         <br/>
-        ההבדל הוא שבגרסה הראשונה השאילתה על תופעות לוואי של תרופות תספק לנו מידע סטטי וקבוע אשר הועלה בראשונה ומאז לא ניתן לשנותו
-        בנוסף, המידע שיוצג יהיה מידע כולל וכללי וכדי להגיע לתרופה ספציפית או להרחיב על תופעת לוואי ספציפית נצטרך להעמיק את החיפוש ולקוות שיש אתר בו זה מעודכן
-        בגרסה השלישית לעומת זאת המידע שנקבל יהיה מידע יותר "פרטני" סביב החיפוש והשאילתה אותה הזנו, נקבל מאמרים רלוונטיים יותר וגם את האפשרות לשיח דינאמי מול רופא ווירטואלי
-        בנוסף לרופא ווירטואלי, קיימת גם האפשרות לייעוץ ושיתוף באתרים למול אנשים שחווים תופעות דומות, המידע יותר זמין, נגיש ומעודכן, יחד עם זאת גם פתוח ליותר אי דיוקים רפואיים
-    </section>
+        <b>מקרה: שווקים מקוונים</b>
+        <br/>
+        <br/>
+        <br/>
+<b>1. Web1: מסחר אלקטרוני מוקדם</b>
+<br/>
+<br/>
+Web1: קטלוגים מקוונים סטטיים שבהם משתמשים יכולים לגלוש במוצרים אך אינם יכולים ליצור אינטראקציה מעבר לצפייה בפרטי המוצר וליצירת קשר עם המוכר באמצעות דואר אלקטרוני או טלפון.
+ארכיטקטורה: שרתים מרכזיים המארחים מידע על המוצר. כל חנות מקוונת פועלת באופן עצמאי עם שרת משלה.
+בעלות ובקרה על נתונים: בעל החנות שולט בנתונים. למשתמשים אין יכולת להוסיף או לשנות תוכן ישירות באתר.
+דוגמה: חנות מקוונת מוקדמת שבה מוצרים מופיעים בדפי HTML סטטיים. לקוחות מעיינים בקטלוג ומבצעים הזמנות על ידי יצירת קשר עם המוכר בדוא"ל.
+<br/>
+<br/>
+<br/>
+<b> Web2: פלטפורמות מסחר אלקטרוני מודרניות</b>
+<br/>
+<br/>
+Web2: פלטפורמות דינמיות ואינטראקטיביות כמו אמזון או eBay שבהן משתמשים יכולים לגלוש, לחפש, להוסיף מוצרים לעגלה, לכתוב ביקורות ולבצע רכישות באינטרנט.
+ארכיטקטורה: פלטפורמות מרכזיות המנהלות שוק רחב היקף, דינמי ואינטראקטיבי. הפלטפורמה מטפלת בכל העסקאות ואינטראקציות המשתמשים.
+בעלות ובקרה על נתונים: הפלטפורמה (למשל, אמזון) מחזיקה ושולטת בכל הנתונים. משתמשים יכולים לתרום תוכן (כמו ביקורות), אבל לפלטפורמה יש שליטה אולטימטיבית על השימוש בנתונים ואחסון.
+דוגמה: אמזון, שבה משתמשים יכולים ליצור חשבונות, לעיין בקטלוג מוצרים עצום, לבצע רכישות, להשאיר ביקורות וליצור אינטראקציה עם מוכרים ולקוחות אחרים.
+<br/>
+<br/>
+<br/>
+<b>3. Web3: שווקים מבוזרים</b>
+<br/>
+<br/>
+Web3: שווקים מבוזרים כמו OpenBazaar שבהם משתמשים יכולים לרשום מוצרים, לבצע רכישות ולהשאיר ביקורות, הכל בעזרת טכנולוגיית בלוקצ'יין וחוזים חכמים.
+ארכיטקטורה: רשת עמית לעמית מבוזרת ללא סמכות מרכזית. עסקאות מבוצעות ומתועדות בבלוקצ'יין.
+בעלות ובקרה על נתונים: משתמשים שומרים על שליטה על הנתונים והעסקאות שלהם. השוק פועל על רשת מבוזרת, ומפחית את התלות בישות אחת.
+דוגמה: OpenBazaar, שבו משתמשים יכולים להקים חנויות משלהם, לרשום מוצרים ולבצע עסקאות ישירות עם קונים ומוכרים באמצעות מטבעות קריפטוגרפיים, ללא צורך בסמכות מרכזית.
+<br/>
+<br/>   
+</section>
 
     <section id="contact" class="section">
         <h3>Contact Me</h3>
